@@ -11,11 +11,22 @@
 解决的bug有，
 1.有时候爬取的是英文版，原先的统配规则无法使用，于是换成了通用的正则
 2.LINUX 下CRONTAB命令很迷，原先在服务器上部署成功后，服务器被回收后也就没有再自动化，每天直接手动运行
-PYTHON-TELEGRAM-BOT 模块是一个非常好用的模块，也需要自己去看看bot api文档
+PYTHON-TELEGRAM-BOT 模块是一个非常好用的模块，也需要自己去telegram 官网上看看bot api文档
 '''
 import pymongo
 import requests
 from config import *
+"""
+config 有个人敏感配置
+配置文件有：
+1.TOKEN
+机器人的token 找BOTfather 按照提示可以申请，不可外泄
+2.MY_ID
+个人id 可以找一个ID机器人要
+3.GROUP_ID
+群组ID 可以转发任意一条消息到ID机器人即可
+机器人ID @userinfobot
+"""
 import re
 import datetime
 from hashlib import md5
@@ -44,6 +55,10 @@ dir = os.getcwd() + os.path.sep + 'bingwallpaper'
 
 
 def parse_bing():
+    """
+    解析bing网页的壁纸链接，采用正则表达式匹配
+    :return: IMG_info,IMG_url
+    """
     base_url = 'https://cn.bing.com/'
     language_parameter = '?mtk=zh-CN'
     # base_url = 'https://www.bing.com/?mkt=zh-CN'
@@ -72,8 +87,8 @@ def down_img(imgurl):
             return img.content
     except ConnectionError:
         send_text(MASTER, 'ConnectionError')
-    except RequestException:
-        send_text(MASTER, "wo ye buzhi dao weisha chu chuole")
+    except RequestException as e:
+        send_text(MASTER, e+"i don't know the reason!")
 
 
 def save_img(img, IMG_info):
@@ -84,7 +99,7 @@ def save_img(img, IMG_info):
     dirs_md5 = [x.split('_')[-1] for x in os.listdir(dir)]
     print(dirs_md5)
     if md5num not in dirs_md5:
-        today = datetime.date.today()
+        today = datetime.date.today()       #日期和md5值命名图片
         img_path = '{0}/{1}.{2}'.format(dir, str(today) + '_' + md5num, 'jpg')
         print(img_path)
         with open(img_path, 'wb')as f:
@@ -109,7 +124,7 @@ def send_wallpaper():
         send_text(text="oh! something wrong")
 
 
-def send_text(chat_id=GFW_ID, text="23333"):
+def send_text(chat_id=MY_ID, text="23333"):
     bot.send_message(chat_id=chat_id, text=text)
 
 
