@@ -10,7 +10,6 @@
 @desc:
 '''
 from urllib.parse import urlencode
-from requests.exceptions import RequestException
 import requests
 from requests import codes
 import os

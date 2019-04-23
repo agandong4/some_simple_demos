@@ -31,7 +31,7 @@ for i in range(len(total_friendList)):
         friendList.append(total_friendList[i])
 print("未发送好友数： ",len(friendList))
 
-with open('sended1.txt','a',encoding='utf-8') as files:
+with open('sended.txt','a',encoding='utf-8') as files:
     for g in range(0,len(friendList)):
         itchat.send(SINCERE_WISH,friendList[g]['UserName'])
         print((friendList[g]['RemarkName'] or friendList[g]['NickName']),'已发送')

@@ -35,9 +35,8 @@ class Genqqmen:
         all_nick = []
         data = 'gc=%s&st=%s&end=%s&sort=0&bkn=1527834478'%(self.qq_num,self.begin,self.end)
         print(data)
-        cookies = {
-        'cookie':'pgv_pvi=460754944; pgv_si=s9801076736; uin=o1357964502; ptisp=cm; RK=1hz4iw3IXa; ptcz=a56bc07ed3cc2906c669b30f794068c07bc47e9b43e40918a47330fd88c8e277; p_uin=o1357964502; skey=@fdS2NMHaV; pt4_token=mMUnYBKr2i8kGIZFnGI5WgkIr5qDrt1O5f-f0SDGsd4_; p_skey=epnJ7icKWeGaE3FLIi7gb7fbLwXygVh*8vp3JGg0Ecg_'
-        }
+        #cookies 需要自己传入
+        cookies ={}
         response = requests.post(self.group_url,data=data,headers=cookies,verify=False)
         print(response.text)
         resp = response.json()

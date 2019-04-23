@@ -24,9 +24,6 @@ def get_one_page(url):
     except RequestException:
         return None
 def parse_one_page(html):
-    # pattern = re.compile('<dd>.*?board-index.*?>(\d+)</i>.*?data-src="(.*?)".*?name"><a\
-    #                      .*?>(.*?)</a>.*?star">(.*?)</p>.*?releasetime">(.*?)</p>\
-    #                     .*?integer">(.*?)</i>.*?fraction>(.*?)</i>.*?</dd>',re.S)
     pattern = re.compile('<dd>.*?board-index.*?">(.*?)</i>.*?data-src="(.*?)".*?name"><a'
                          '.*?">(.*?)</a></p>.*?star">(.*?)</p>.*?releasetime">(.*?)</p>'
                          '.*?integer">(.*?)</i>.*?fraction">(.*?)</i></p>.*?</dd>',re.S)
