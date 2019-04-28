@@ -1,6 +1,12 @@
 # some_simple_demos
-个人写的一些爬虫,爬取ins之类,telegram_bot bing图片
-Some_simple_demo
+#### 个人利用自己的技能写的一些小东西,主要有:
+
+* **爬取boss直聘数据分析岗位**	对爬取的结果进行数据分析
+  * 涉及到Excel可视化,透视表,切片器,tableau,mysql,xpath解析,python 语法
+* **bing壁纸爬虫 ** 每天爬取壁纸,并通过代理,投送到个人频道上
+  * 涉及到正则表达式,request库,python -telegram-bot等三方库,hash校验
+* **Instrgram 爬虫** 自动抓取ins上明星的图片
+  * 涉及到selenium 自动模拟,request 库,异常的捕获,mongodb的存储
 
 ## bosszhipin: boss 直聘岗位分析实战
 
@@ -8,9 +14,21 @@ Some_simple_demo
 爬取boss直聘网站上数据分析岗位,累计有效数据116条,并用Excel teableau 等进行数据可视化,同时采用网络工具,对地址进行解析,生成了多个岗位的坐标图
 ```
 
+![数据透视表](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-050518.png)
 
+#### 经验不限,一年以内的起薪一目了然,从中可以看出哥哥工作年限的平均薪资
 
+![各区域岗位统计](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-050521.png)
 
+#### 从上图可以看出,长宁,浦东新区和闵行区三个区的数据岗位需求最多,机会最大
+
+![tableau](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-050539.png)
+
+#### 从上图可以看出,数据分析的岗位要求最多的是本科,即本科是一般要求,而对博士生的要求最低,而对本科生而言,一年以内的工作经验可以拿到一万出头,而应届生则较差
+
+![image-20190428130733225](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-050734.png)
+
+#### 通过谷歌地图的api对公司的地址解析,得到了近-热力图,可以清楚看到数据分析岗位的地理位置分布
 
 ## bingwallpaper_bot_code:
 
@@ -54,6 +72,6 @@ PYTHON-TELEGRAM-BOT 模块是一个非常好用的三方库，也需要自己去
 爬取了某二手群2000人的QQ头像,将这些头像集合拼接成了蒙太奇图片,并做了昵称的词云图
 ```
 
-![image-20190427135232637](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-27-055251.png)
+![2019-04-28-050045 copy](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-050416.jpg)
 
 ![image-20190427135308918](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-27-055312.png)
