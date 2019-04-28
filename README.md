@@ -1,12 +1,15 @@
 # some_simple_demos
 #### 个人利用自己的技能写的一些小东西,主要有:
 
-* **爬取boss直聘数据分析岗位**	对爬取的结果进行数据分析
+* **爬取boss直聘数据分析岗位**	对爬取的结果进行数据分析,通过navicat 导入到myslq当中
   * 涉及到Excel可视化,透视表,切片器,tableau,mysql,xpath解析,python 语法
-* **bing壁纸爬虫 ** 每天爬取壁纸,并通过代理,投送到个人频道上
+* **bing壁纸爬虫** 每天爬取壁纸,并通过代理,投送到个人频道上
   * 涉及到正则表达式,request库,python -telegram-bot等三方库,hash校验
 * **Instrgram 爬虫** 自动抓取ins上明星的图片
   * 涉及到selenium 自动模拟,request 库,异常的捕获,mongodb的存储
+* **Titan kaggle 生存预测**  参加的经典比赛,采用基于Gini系数的决策树对乘客进行生存预测
+  * 涉及到python的matplotlib.pyplot  pandas sklearn seaborn
+  * 数据清洗有去处空值,填充平均值,回归预测
 
 ## bosszhipin: boss 直聘岗位分析实战
 
@@ -52,6 +55,24 @@ PYTHON-TELEGRAM-BOT 模块是一个非常好用的三方库，也需要自己去
 
 ![image-20190427010922486](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-26-170924.png)
 
+## Titan kaggle 生存预测
+
+~~~
+对泰坦尼克号进行生存预测
+~~~
+
+![pies](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-054945.png)
+
+![image-20190428134647364](/Users/agan/Google Drive/Github/some_simple_demos/个人作品集/数据挖掘/pclass_survived.png)
+
+
+
+#### 图表中可以看出,船舱为一等舱的女士获救率高到95%以上,而男士普遍的生存率不高;男士的平均生存率为19%,女士为74%
+
+![image-20190428141903373](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-062223.png)
+
+#### 提交结果,预测准确率为72%
+
 ## new_year_zhufu: 自动向微信好友发送新年祝福
 
 ```
@@ -74,4 +95,4 @@ PYTHON-TELEGRAM-BOT 模块是一个非常好用的三方库，也需要自己去
 
 ![2019-04-28-050045 copy](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-050416.jpg)
 
-![image-20190427135308918](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-27-055312.png)
+#### 学校校徽蒙太奇
