@@ -63,11 +63,11 @@ def send_text(text):
 
 def main():
     try:
-        results = get_score(baseurl)
+        RESULTS = get_score(baseurl)
     except Exception as e:
         send_text(str(e) + "get_score fun has something wrong!")
 
-    restore_scores(results)
+    restore_scores(RESULTS)
 
 if __name__ == '__main__':
     while True:
