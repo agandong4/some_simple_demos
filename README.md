@@ -63,7 +63,7 @@ PYTHON-TELEGRAM-BOT 模块是一个非常好用的三方库，也需要自己去
 
 ![pies](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-054945.png)
 
-![image-20190428134647364](/Users/agan/Google Drive/Github/some_simple_demos/个人作品集/数据挖掘/pclass_survived.png)
+![image-20190428142712225](http://agandong4-bucket.oss-cn-shanghai.aliyuncs.com/2019-04-28-062715.png)
 
 
 
