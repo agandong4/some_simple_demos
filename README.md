@@ -1,5 +1,5 @@
 # some_simple_demos
-#### 个人利用自己的技能写的一些小东西,主要有:
+#### 个人利用自己的数据分析等技能写的一些小东西,主要有:
 
 * **爬取boss直聘数据分析岗位**	对爬取的结果进行数据分析,通过navicat 导入到myslq当中
   * 涉及到Excel可视化,透视表,切片器,tableau,mysql,xpath解析,python 语法
